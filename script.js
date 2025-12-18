@@ -19,3 +19,12 @@ function createGrid(size){
 
 }
 createGrid(16);//default grid size
+resizeBtn.addEventListener("click",()=>{
+    let newSize=prompt("Enter grid size (max 100):");
+
+    if (newSize>100){
+        alert("Size too large! Please enter a number less than or equal to 100.");
+        return;
+    }
+    createGrid(newSize);
+})
